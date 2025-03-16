@@ -1,0 +1,20 @@
+// See https://containers.dev/implementors/json_reference/ for configuration reference
+// Dockerfile used, default user is `root`. If add new user, update root privileges and update `remoteUser`
+{
+	"name": "Project",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"remoteUser": "root",
+	"remoteEnv": {},
+	"features": {},
+	"customizations": {
+		"vscode": {
+			"extensions": [ "eamodio.gitlens" ]
+		}
+	},
+	"mounts": [
+    // Mount .ssh folder for using ssh verification for commits or deploys or ssh connections
+		// "source=/home/user/.ssh,target=/root/.ssh,type=bind"
+	]
+}
