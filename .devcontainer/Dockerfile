@@ -1,8 +1,11 @@
-# This image used Alpine
+# This image used Ubuntu
 FROM ghcr.io/jesusfernxndez/developer-container:main
 
-# Example install nodejs npm pnpm with Alpine
-# RUN apk add --no-cache nodejs npm pnpm
+# Example install nodejs using fnm
+# developer-container image already has zsh, zinit and starship installed
+# RUN zsh -l -c 'curl -fsSL https://fnm.vercel.app/install | bash \
+#     && source $HOME/.zshrc \
+#     && fnm install --latest'
 
-# Set `DEVCONTAINER` environment variable para que VS Code lo reconozca
+# Set `DEVCONTAINER` environment variable to true
 ENV DEVCONTAINER=true
